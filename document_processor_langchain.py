@@ -1,5 +1,7 @@
 import os
-from typing import List, Dict, Set
+import logging
+from typing import List, Dict
+from datetime import datetime
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
@@ -8,11 +10,8 @@ from langchain_community.document_loaders import (
     Docx2txtLoader,
     TextLoader
 )
-import logging
-from datetime import datetime, timedelta
-import hashlib
 from langchain.schema import Document
-import traceback
+import hashlib
 
 # Конфигурация
 PERSIST_DIR = "chroma_db"  # Директория для хранения базы данных Chroma

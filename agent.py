@@ -1,14 +1,14 @@
 import os
-from typing import List, Dict
+import logging
+from typing import List
+from dotenv import load_dotenv
 from langchain_gigachat import GigaChat
 from langchain_huggingface import HuggingFaceEndpointEmbeddings
 from langchain_chroma import Chroma
 from langgraph.prebuilt import ToolNode, create_react_agent
-from langchain.agents import tool
 from langgraph.checkpoint.memory import MemorySaver
-from dotenv import load_dotenv
+from langchain.agents import tool
 from document_processor_langchain import PERSIST_DIR, EMBEDDING_MODEL
-import logging
 
 # Загрузка переменных окружения
 load_dotenv()
@@ -97,6 +97,3 @@ if __name__ == '__main__':
     while True:
         user_input = input("Спрашивай: ")
         agent_ask(1, user_input)
-
-# какие tools тебе доступны
-# используй ctk_retrieve_tool и назови слои информационной архитектуры
