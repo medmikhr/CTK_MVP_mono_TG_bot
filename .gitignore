@@ -58,4 +58,7 @@ temp/
 chroma_db_huggingface/
 *.bin
 *.sqlite3
-*.pickle 
+*.pickle
+
+# Игнорировать папку с файлами для удаления
+to delete/ 
