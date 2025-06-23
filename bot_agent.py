@@ -12,6 +12,7 @@ from telegram.ext import (
 from dotenv import load_dotenv
 from document_processor import process_document, get_document_info, delete_document
 from gigachat_tool_calling_agent import call_agent, get_functions_info
+# from manual_chain_agent import call_agent, get_functions_info
 import time
 
 # Загрузка переменных окружения
